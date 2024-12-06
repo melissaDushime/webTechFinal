@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Unit Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Academic Unit Management</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Insert Academic Unit Form -->
+            <h3>Insert Academic Unit</h3>
+            <form id="insertForm" action="AcademicUnitServlet" method="post">
+                <div class="form-group">
+                    <label for="academicUnitName">Academic Unit Name:</label>
+                    <input type="text" class="form-control" id="academicUnitName" name="academicUnitName" required>
+                </div>
+                <div class="form-group">
+                    <label for="academicUnitType">Academic Unit Type:</label>
+                    <select class="form-control" id="academicUnitType" name="academicUnitType" required>
+                        <option value="DEPARTMENT">Department</option>
+                        <option value="FACULTY">Faculty</option>
+                        <option value="SCHOOL">School</option>
+                        <!-- Add more options if needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="parentId">Parent Academic Unit ID:</label>
+                    <input type="number" class="form-control" id="parentId" name="parentId">
+                </div>
+                <button type="submit" class="btn btn-primary">Insert</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <!-- Delete Academic Unit Form -->
+            <h3>Delete Academic Unit</h3>
+            <form id="deleteForm" action="AcademicUnitServlet" method="delete">
+                <div class="form-group">
+                    <label for="academicUnitId">Academic Unit ID:</label>
+                    <input type="number" class="form-control" id="academicUnitId" name="academicUnitId" required>
+                </div>
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        /* CSS styles for the registration form */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 20px;
+        }
+
+        .access-card {
+            display: flex;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-left {
+            flex: 1;
+            /* Add styling for your image if present */
+        }
+
+        .card-right {
+            flex: 1;
+            padding: 30px;
+            position: relative;
+        }
+
+        #form-title {
+            font-family: 'Delicious Handrawn', cursive;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-element {
+            margin-bottom: 20px;
+        }
+
+        .form-element label {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .form-element input,
+        .form-element select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .sign-up-btn {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .sign-up-btn:hover {
+            background-color: #218838;
+        }
+
+        #signin-link {
+            display: block;
+            font-size: 14px;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        #signin-link .highlighted {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        #error {
+            color: red;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="access-card">
+            <div class="card-left">
+                <!-- Your image or content for the left side of the card -->
+            </div>
+            <div id="signup-form" class="card-right">
+                <h1 id="form-title">Registration form</h1>
+                <form action="register" method="post" class="sign-form">
+                    <p id="error"></p>
+                    <div class="form-element signup">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="s-email">
+                    </div>
+                    <div class="form-element signup">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="s-password">
+                    </div>
+                    <select class="form-element signup" name="role" id="role">
+                        <option disabled selected>Select your role</option>
+                        <option value="ADMIN">Admin</option>
+                        <option value="TEACHER">Teacher</option>
+                        <option value="STUDENT">Student</option>
+                    </select>
+                    <input id="sign-up" class="sign-up-btn" type="submit" value="Sign up">
+                    <a id="signin-link" href="login.html">Already have an account?<span class="highlighted"> sign in</span></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

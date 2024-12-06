@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Student Management</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Insert Student Form -->
+            <h3>Insert Student</h3>
+            <form id="insertForm" action="StudentServlet" method="post">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="dateOfBirth">Date of Birth:</label>
+                    <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Insert</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <!-- Update Student Form -->
+            <h3>Update Student</h3>
+            <form id="updateForm" action="UpdateStudentServlet" >
+                <div class="form-group">
+                    <label for="updateId">Student ID:</label>
+                    <input type="number" class="form-control" id="updateId" name="studentId" required>
+                </div>
+                <div class="form-group">
+                    <label for="updateFirstName">First Name:</label>
+                    <input type="text" class="form-control" id="updateFirstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="updateLastName">Last Name:</label>
+                    <input type="text" class="form-control" id="updateLastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="updateDateOfBirth">Date of Birth:</label>
+                    <input type="date" class="form-control" id="updateDateOfBirth" name="dateOfBirth" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+            <br>
+            <!-- Delete Student Form -->
+            <h3>Delete Student</h3>
+            <form id="deleteForm" action="StudentServlet" >
+                <div class="form-group">
+                    <label for="deleteId">Student ID:</label>
+                    <input type="number" class="form-control" id="deleteId" name="studentId" required>
+                </div>
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</body>
+</html>
